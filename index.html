@@ -1,0 +1,56 @@
+<head>
+    <title>New Random Public App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h5>Random Public App</h5>
+        <div class="row">
+            <div class="six columns login">
+                <form>
+                    <input type="password" id="password-input">
+                    <button id="login-button">login</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row day-selection">
+            <div class="four columns day selected" id="day0">today</div>
+            <div class="four columns day" id="day1">tomorrow</div>
+            <div class="four columns day" id="day2">after tomorrow</div>
+        </div>
+
+        <div class="row">
+            <div class="four columns">
+                <div class="posts u-full-width">
+                    <div class="post"></div>
+                </div>
+            </div>
+            <div class="five columns">
+                <div class="edit">
+                    <textarea class="u-full-width" disabled></textarea>
+                    <label for="img-url">Image URL</label>
+                    <input type="text" id="img-url" class="u-full-width" placeholder="post img url here">
+                    <img src="" id="preview">
+                </div>
+            </div>
+            <div class="three columns">
+                <div class="controls">
+                    <select class="u-full-width" id="type-select">
+                        <option value="random">random</option>
+                    </select>
+                    <button class="u-full-width" id="new-msg">new msg</button>
+                    <button class="u-full-width" id="new-user">new user</button>
+                    <button class="button-primary u-full-width" id="save">save</button>
+                    <p class="status"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="utils.js"></script>
+    <script src="login.js"></script>
+    <script src="vk_utils.js"></script>
+    <script src="script.js"></script>
+</body>
