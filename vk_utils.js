@@ -1,5 +1,6 @@
 function getToken() {
-    return getCookie("token");
+    // return getCookie("token");
+    return Cookies.get('token');
 }
 
 function getAllDelayedPosts() {

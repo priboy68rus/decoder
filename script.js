@@ -13,7 +13,8 @@ posts = []
 posts_by_day = [[], [], []]
 
 function startup() {
-    const token = getCookie("token");
+    // const token = getCookie("token");
+    const token = Cookies.get('token');
     
     if (token != null) {
         loginDiv.innerHTML = "";
