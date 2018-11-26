@@ -201,8 +201,16 @@ function setPostDetails(day_i, i) {
     textareaElement.textContent = post.text;
     
     if (post["attachments"] != null && post["attachments"][0]["photo"] != null) {
-        sizes = post["attachments"][0]["photo"]["sizes"]
-        img_url.value = sizes[sizes.length - 2]["url"];
+        var sizes = post["attachments"][0]["photo"]["sizes"];
+        var max = 0;
+        var j = 0;
+        for (var i = 0; i < sizes.length; i++) {
+            if (sizes[i].width > max) {
+                max = sizes[i].width;
+                j = i;
+            }
+        }
+        img_url.value = sizes[j]["url"];
     } else {
         img_url.value = "";
     }
